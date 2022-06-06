@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/ko1248vpad8p1fbp?svg=true)](https://ci.appveyor.com/project/Sidenov/page-object)
