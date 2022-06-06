@@ -49,7 +49,7 @@ public class MoneyTransferTest {
         int startBalanceOfCardTwo = Integer.parseInt(DataHelper.cardBalance(dashboardPage.getBalanceOfSecondCard().getText()));
         var transferPage = dashboardPage.replenishTheSecondCard();
         var amountToTransfer = DataHelper.twoThousand();
-        transferPage.fromCardToCard(amountToTransfer, DataHelper.cardTwo());
+        transferPage.fromCardToCard(amountToTransfer, DataHelper.cardOne());
 
         int expectedBalanceOfCardOne = startBalanceOfCardOne - Integer.parseInt(DataHelper.twoThousand().getAmount());
         int expectedBalanceOfCardTwo = startBalanceOfCardTwo + Integer.parseInt(DataHelper.twoThousand().getAmount());
