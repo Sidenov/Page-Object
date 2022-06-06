@@ -45,7 +45,7 @@ public class MoneyTransferTest {
     }
 
     @Test
-    @DisplayName("успешный перевод 2000 рублей с первой карты на вторую")
+    @DisplayName("успешный перевод 2000 рублей со второй карты на первую")
     void shouldSuccessTransferFromTwoToCardOne() {
         var dashboardPage = new DashboardPage();
         int startBalanceOfCardOne = Integer.parseInt(DataHelper.cardBalance(dashboardPage.getBalanceOfFirstCard().getText()));
