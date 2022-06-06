@@ -10,6 +10,7 @@ import ru.netology.web.page.LoginPage;
 import ru.netology.web.page.TransferPage;
 
 import static com.codeborne.selenide.Selenide.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MoneyTransferTest {
 
@@ -39,6 +40,8 @@ public class MoneyTransferTest {
 
         int actualBalanceOfCardOne = Integer.parseInt(DataHelper.cardBalance(dashboardPage.getBalanceOfFirstCard().getText()));
         int actualBalanceOfCardTwo = Integer.parseInt(DataHelper.cardBalance(dashboardPage.getBalanceOfSecondCard().getText()));
+        assertEquals(expectedBalanceOfCardOne, actualBalanceOfCardOne);
+        assertEquals(expectedBalanceOfCardTwo, actualBalanceOfCardTwo);
     }
 
     @Test
@@ -56,6 +59,9 @@ public class MoneyTransferTest {
 
         int actualBalanceOfCardOne = Integer.parseInt(DataHelper.cardBalance(dashboardPage.getBalanceOfFirstCard().getText()));
         int actualBalanceOfCardTwo = Integer.parseInt(DataHelper.cardBalance(dashboardPage.getBalanceOfSecondCard().getText()));
+
+        assertEquals(expectedBalanceOfCardOne, actualBalanceOfCardOne);
+        assertEquals(expectedBalanceOfCardTwo, actualBalanceOfCardTwo);
     }
 
 
